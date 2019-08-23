@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SSM-Dubbo-Demo.iml" filepath="$PROJECT_DIR$/SSM-Dubbo-Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comsumer/comsumer.iml" filepath="$PROJECT_DIR$/comsumer/comsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provide/provide.iml" filepath="$PROJECT_DIR$/provide/provide.iml" />
+    </modules>
+  </component>
+</project>

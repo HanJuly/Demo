@@ -1,0 +1,467 @@
+2019-07-21 12:54:27 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 12:54:28 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 12:55:04 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 12:55:05 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 12:55:06 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.support.XmlWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dubboContoller' defined in file [E:\project\SSM-DubboDemo\comsumer\target\classes\com\han\consumer\controller\DubboContoller.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Failed to init remote service reference at filed userService in class com.han.consumer.controller.DubboContoller; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.han.consumer.controller.UserService. No provider available for the service com.han.consumer.controller.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-service&dubbo=2.8.4&interface=com.han.consumer.controller.UserService&methods=getName&pid=23688&side=consumer&timestamp=1563684906182 to the consumer 10.254.6.238 use dubbo version 2.8.4
+2019-07-21 12:55:06 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:312) ]
+ERROR:Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dubboContoller' defined in file [E:\project\SSM-DubboDemo\comsumer\target\classes\com\han\consumer\controller\DubboContoller.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Failed to init remote service reference at filed userService in class com.han.consumer.controller.DubboContoller; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.han.consumer.controller.UserService. No provider available for the service com.han.consumer.controller.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-service&dubbo=2.8.4&interface=com.han.consumer.controller.UserService&methods=getName&pid=23688&side=consumer&timestamp=1563684906182 to the consumer 10.254.6.238 use dubbo version 2.8.4
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanInitializationException: Failed to init remote service reference at filed userService in class com.han.consumer.controller.DubboContoller; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.han.consumer.controller.UserService. No provider available for the service com.han.consumer.controller.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-service&dubbo=2.8.4&interface=com.han.consumer.controller.UserService&methods=getName&pid=23688&side=consumer&timestamp=1563684906182 to the consumer 10.254.6.238 use dubbo version 2.8.4
+	at com.alibaba.dubbo.config.spring.AnnotationBean.postProcessBeforeInitialization(AnnotationBean.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	... 20 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service com.han.consumer.controller.UserService. No provider available for the service com.han.consumer.controller.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-service&dubbo=2.8.4&interface=com.han.consumer.controller.UserService&methods=getName&pid=23688&side=consumer&timestamp=1563684906182 to the consumer 10.254.6.238 use dubbo version 2.8.4
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.AnnotationBean.refer(AnnotationBean.java:317)
+	at com.alibaba.dubbo.config.spring.AnnotationBean.postProcessBeforeInitialization(AnnotationBean.java:246)
+	... 23 more
+2019-07-21 12:57:19 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 12:57:21 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:00:35 下午 [Thread: New I/O worker #1][ Class:com.alibaba.dubbo.remoting.transport.AbstractServer >> Method: com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:198) ]
+WARN: [DUBBO] All clients has discontected from /10.254.6.238:20880. You can graceful shutdown now., dubbo version: 2.8.4, current host: 127.0.0.1
+2019-07-21 13:00:51 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:00:52 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:12:22 下午 [Thread: New I/O worker #2][ Class:com.alibaba.dubbo.remoting.transport.AbstractServer >> Method: com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:198) ]
+WARN: [DUBBO] All clients has discontected from /10.254.6.238:20880. You can graceful shutdown now., dubbo version: 2.8.4, current host: 127.0.0.1
+2019-07-21 13:12:39 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:12:40 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:12:40 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.support.XmlWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dubboContoller': Unsatisfied dependency expressed through field 'dubboService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.han.provide.service.DubboService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-21 13:12:40 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:312) ]
+ERROR:Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dubboContoller': Unsatisfied dependency expressed through field 'dubboService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.han.provide.service.DubboService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.han.provide.service.DubboService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+2019-07-21 13:14:12 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:14:13 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:14:13 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.support.XmlWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dubboContoller': Unsatisfied dependency expressed through field 'dubboService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.han.provide.service.DubboService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-21 13:14:13 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:312) ]
+ERROR:Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dubboContoller': Unsatisfied dependency expressed through field 'dubboService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.han.provide.service.DubboService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.han.provide.service.DubboService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+2019-07-21 13:18:11 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:18:12 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:25:24 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:25:25 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:26:51 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:26:52 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:32:38 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:32:39 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 13:35:35 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 13:35:36 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 14:21:54 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 14:21:55 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.support.XmlWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dubboServiceImpl' defined in file [E:\project\SSM-DubboDemo\comsumer\target\classes\com\han\consumer\service\DubboServiceImpl.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Failed to init remote service reference at filed userService in class com.han.consumer.service.DubboServiceImpl; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.han.provide.services.UserService. No provider available for the service com.han.provide.services.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-conusmer&dubbo=2.8.4&interface=com.han.provide.services.UserService&methods=getName&pid=18764&side=consumer&timestamp=1563690115273 to the consumer 10.254.6.238 use dubbo version 2.8.4
+2019-07-21 14:21:55 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:312) ]
+ERROR:Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dubboServiceImpl' defined in file [E:\project\SSM-DubboDemo\comsumer\target\classes\com\han\consumer\service\DubboServiceImpl.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Failed to init remote service reference at filed userService in class com.han.consumer.service.DubboServiceImpl; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.han.provide.services.UserService. No provider available for the service com.han.provide.services.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-conusmer&dubbo=2.8.4&interface=com.han.provide.services.UserService&methods=getName&pid=18764&side=consumer&timestamp=1563690115273 to the consumer 10.254.6.238 use dubbo version 2.8.4
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanInitializationException: Failed to init remote service reference at filed userService in class com.han.consumer.service.DubboServiceImpl; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.han.provide.services.UserService. No provider available for the service com.han.provide.services.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-conusmer&dubbo=2.8.4&interface=com.han.provide.services.UserService&methods=getName&pid=18764&side=consumer&timestamp=1563690115273 to the consumer 10.254.6.238 use dubbo version 2.8.4
+	at com.alibaba.dubbo.config.spring.AnnotationBean.postProcessBeforeInitialization(AnnotationBean.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	... 20 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service com.han.provide.services.UserService. No provider available for the service com.han.provide.services.UserService from the url zookeeper://192.168.72.141:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboxdemo-conusmer&dubbo=2.8.4&interface=com.han.provide.services.UserService&methods=getName&pid=18764&side=consumer&timestamp=1563690115273 to the consumer 10.254.6.238 use dubbo version 2.8.4
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.AnnotationBean.refer(AnnotationBean.java:317)
+	at com.alibaba.dubbo.config.spring.AnnotationBean.postProcessBeforeInitialization(AnnotationBean.java:246)
+	... 23 more
+2019-07-21 14:25:59 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 14:26:01 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 14:30:51 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 14:30:53 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.
+2019-07-21 14:30:55 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/WatcherEvent
+	at org.apache.zookeeper.ClientCnxn$SendThread.readResponse(ClientCnxn.java:769)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:94)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+Caused by: java.lang.ClassNotFoundException: org.apache.zookeeper.proto.WatcherEvent
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	... 4 more
+2019-07-21 14:30:56 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+Caused by: java.lang.ClassNotFoundException: org.apache.zookeeper.proto.SetWatches
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	... 3 more
+2019-07-21 14:30:57 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:30:58 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:30:59 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:30:59 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:01 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:01 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:02 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:04 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:04 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:05 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:06 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:07 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:07 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:09 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:09 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:10 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:11 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:12 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:12 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:14 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:14 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:15 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:16 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:17 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:18 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:20 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:20 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:20 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:22 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:22 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:22 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:24 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:24 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:25 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:27 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:27 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:28 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.143:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.143/192.168.72.143:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:30 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.141:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.141/192.168.72.141:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:30 下午 [Thread: localhost-startStop-1-SendThread(192.168.72.142:2181)][ Class:org.apache.zookeeper.ClientCnxn >> Method: org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162) ]
+WARN:Session 0x16c0f878d080005 for server 192.168.72.142/192.168.72.142:2181, unexpected error, closing socket connection and attempting reconnect
+java.lang.NoClassDefFoundError: org/apache/zookeeper/proto/SetWatches
+	at org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:926)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:363)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2019-07-21 14:31:46 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.mapper.ClassPathMapperScanner >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:No MyBatis mapper was found in '[com.han.mybatisdemo.mapper]' package. Please check your configuration.
+2019-07-21 14:31:50 下午 [Thread: localhost-startStop-1][ Class:org.mybatis.spring.SqlSessionFactoryBean >> Method: org.mybatis.logging.Logger.warn(Logger.java:44) ]
+WARN:Property 'mapperLocations' was specified but matching resources are not found.

@@ -4,6 +4,10 @@
 ## lucene demo
 ## solr demo
 ## mapreduce demo
-
+## HDFS JAVA API demo
+## Hive 自定义函数 demo
+## kafak produce consumer demo
+## zookeeper demo
+## mybatis Demo
 
 
