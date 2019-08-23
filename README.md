@@ -3,3 +3,7 @@
 ## SSM 架构
 ## lucene demo
 ## solr demo
+## mapreduce demo
+
+
+
